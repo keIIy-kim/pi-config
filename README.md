@@ -69,8 +69,3 @@ rsync -aL --delete --delete-excluded \
   ~/.pi/ ~/repos/pi-config/
 ```
 
-## scripts
-
-- `symlink-pi-agent.sh` — symlink 생성
-- `restore-pi-agent.sh` — `.bak` 원복
-- `check-broken-symlinks.sh` — broken symlink 검사

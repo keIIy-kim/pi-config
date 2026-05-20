@@ -75,6 +75,9 @@ coverage/
 .vscode/
 .idea/
 
+# Local helper scripts (not pi config)
+*.sh
+
 # Local scratch files
 progress.md
 research-*.md
