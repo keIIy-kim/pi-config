@@ -13,16 +13,17 @@
 
 ## 설치한 pi packages
 
-| Package | Version | 목적 |
-| --- | ---: | --- |
-| `pi-subagents` | `0.24.3` | 여러 agent를 나눠 실행하고 review/worker/planner workflow를 구성 |
-| `pi-simplify` | `0.2.1` | pi 작업 흐름을 단순화하는 보조 기능 |
-| `@juicesharp/rpiv-todo` | `1.10.2` | TODO/task 추적 |
-| `pi-rtk-optimizer` | `0.7.1` | RTK optimizer 설정/extension |
-| `@capyup/pi-goal` | `0.6.0` | goal/sisyphus goal 관리 |
-| `pi-prompt-template-model` | `0.9.3` | prompt template model 지원 |
+| Package | Version | 설치 링크 | 목적 |
+| --- | ---: | --- | --- |
+| `pi-subagents` | `0.24.3` | [pi.dev](https://pi.dev/packages/pi-subagents) | 여러 agent를 나눠 실행하고 review/worker/planner workflow를 구성 |
+| `pi-simplify` | `0.2.1` | [pi.dev](https://pi.dev/packages/pi-simplify) | pi 작업 흐름을 단순화하는 보조 기능 |
+| `@juicesharp/rpiv-todo` | `1.10.2` | [pi.dev](https://pi.dev/packages/@juicesharp/rpiv-todo) | TODO/task 추적 |
+| `pi-rtk-optimizer` | `0.7.1` | [pi.dev](https://pi.dev/packages/pi-rtk-optimizer) | RTK optimizer 설정/extension |
+| `@capyup/pi-goal` | `0.6.0` | [pi.dev](https://pi.dev/packages/@capyup/pi-goal) | goal/sisyphus goal 관리 |
+| `pi-prompt-template-model` | `0.9.3` | [pi.dev](https://pi.dev/packages/pi-prompt-template-model) | prompt template model 지원 |
 
 정확한 lock 정보: `agent/npm/package-lock.json`
+설치는 각 package 페이지의 명령을 사용하거나 `pi install npm:<package>` 형식으로 실행합니다.
 
 ## 포함된 설정
 
