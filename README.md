@@ -1,90 +1,60 @@
 # pi-config
 
-Personal [pi](https://github.com/earendil-works/pi-coding-agent) configuration snapshot.
+내 pi 설정 백업 repo.
 
-이 repo는 `~/.pi` 설정을 symlink가 아닌 실제 파일로 복사한 백업입니다.
-원본 설정은 `~/.pi` / `~/.config/pi`에 그대로 둡니다.
+`~/.pi`의 symlink를 따라가 실제 파일로 복사한 snapshot입니다. 원본 설정은 건드리지 않습니다.
 
-## Installed pi packages
+## 목적
 
-`agent/settings.json` 기준 활성화된 package입니다.
+- 새 장비에서 pi 설정을 빠르게 복구
+- 내가 쓰는 package/skill/extension 구성을 한 곳에 기록
+- symlink 대상 원본 파일까지 실제 내용으로 백업
+- sessions/log/cache 같은 실행 중 생성물은 제외
 
-| Package | Version | Purpose |
+## 설치한 pi packages
+
+| Package | Version | 목적 |
 | --- | ---: | --- |
-| `pi-subagents` | `0.24.3` | subagent orchestration / reviewer, worker, planner 등 agent workflow |
-| `pi-simplify` | `0.2.1` | simplify helpers |
-| `@juicesharp/rpiv-todo` | `1.10.2` | TODO/task tracking tool |
-| `pi-rtk-optimizer` | `0.7.1` | RTK optimizer extension/config |
-| `@capyup/pi-goal` | `0.6.0` | goal / sisyphus goal management |
-| `pi-prompt-template-model` | `0.9.3` | prompt template model support |
+| `pi-subagents` | `0.24.3` | 여러 agent를 나눠 실행하고 review/worker/planner workflow를 구성 |
+| `pi-simplify` | `0.2.1` | pi 작업 흐름을 단순화하는 보조 기능 |
+| `@juicesharp/rpiv-todo` | `1.10.2` | TODO/task 추적 |
+| `pi-rtk-optimizer` | `0.7.1` | RTK optimizer 설정/extension |
+| `@capyup/pi-goal` | `0.6.0` | goal/sisyphus goal 관리 |
+| `pi-prompt-template-model` | `0.9.3` | prompt template model 지원 |
 
-Exact versions are pinned in `agent/npm/package-lock.json`.
+정확한 lock 정보: `agent/npm/package-lock.json`
 
-## Packaged skills
+## 포함된 설정
 
-현재 snapshot에 포함된 packaged skill set입니다.
+- model/default 설정: `agent/models.json`, `agent/settings.json`
+- prompts/themes/extensions
+- packaged skills
+  - engineering: `diagnose`, `tdd`, `prototype`, `triage`, `to-prd`, `to-issues` 등
+  - productivity: `caveman`, `grill-me`, `handoff`, `write-a-skill`
+- custom skills
+  - `frontend-slides`
+  - `workspace`
 
-### Engineering
+## 제외한 것
 
-- `diagnose` — reproduce/minimise/hypothesise/instrument/fix/regression-test loop
-- `grill-with-docs` — plan stress-test with `CONTEXT.md` / ADR updates
-- `improve-codebase-architecture` — architecture refactoring/deepening opportunities
-- `prototype` — throwaway prototype for UI/state/model exploration
-- `tdd` — red-green-refactor workflow
-- `to-issues` — convert plan/spec into issue slices
-- `to-prd` — turn context into PRD
-- `triage` — issue triage workflow
-- `zoom-out` — zoom-out/planning skill
+`.gitignore`로 제외:
 
-### Productivity
+- sessions/logs/cache/temp
+- runtime DB
+- backups/archives
+- local scratch files
+- generated binaries
 
-- `caveman` — ultra-compressed communication mode
-- `grill-me` — decision-tree interview / plan stress-test
-- `handoff` — compact current context into handoff
-- `write-a-skill` — create new pi skills
-
-## Custom local skills
-
-Custom-made local skills are also tracked:
-
-- `frontend-slides`
-- `workspace`
-
-## Extensions tracked
-
-Local extension files under `agent/extensions/`:
-
-- `caffeinate`
-- `custom-footer`
-- `custom-splash`
-- `permission-gate`
-- `preset`
-- `title-status`
-- `pi-rtk-optimizer/config.json`
-
-## Models / defaults
-
-- default provider: `openai-codex`
-- default model: `gpt-5.5`
-- enabled models:
-  - `openai-codex/gpt-5.5`
-  - `querypie-kimi/kimi-k2.6`
-- theme: `soft-dracula`
-- default thinking level: `medium`
-- compaction enabled
-
-## Snapshot / restore notes
-
-This repo was created with dereferenced symlink copy:
+## snapshot 명령
 
 ```bash
-rsync -aL --delete --delete-excluded --exclude-from ~/.pi/.gitignore ~/.pi/ ~/repos/pi-config/
+rsync -aL --delete --delete-excluded \
+  --exclude-from ~/.pi/.gitignore \
+  ~/.pi/ ~/repos/pi-config/
 ```
 
-`.gitignore` excludes sessions, logs, caches, backups, runtime DBs, generated binaries, and local scratch files.
+## helper scripts
 
-Helper scripts:
-
-- `symlink-pi-agent.sh` — create `~/.pi/agent` symlinks from `~/.config/pi/agent`
-- `restore-pi-agent.sh` — restore previous `.bak` files after symlink migration
-- `check-broken-symlinks.sh` — detect broken symlinks under `~/.pi/agent`
+- `symlink-pi-agent.sh` — `~/.config/pi/agent`에서 `~/.pi/agent`로 symlink 생성
+- `restore-pi-agent.sh` — `.bak` 파일에서 원복
+- `check-broken-symlinks.sh` — 깨진 symlink 검사
