@@ -48,6 +48,7 @@ pi install npm:<package>
 
 - `agent/models.json`
 - `agent/settings.json`
+- `goal-auditor.json`
 - prompts / themes / extensions
 - packaged skills
 - custom skills: `frontend-slides`, `workspace`
