@@ -34,8 +34,6 @@ git clone https://github.com/keIIy-kim/pi-config.git ~/repos/pi-config
 | `@juicesharp/rpiv-todo` | `1.10.2` | [pi.dev](https://pi.dev/packages/@juicesharp/rpiv-todo) | TODO 추적 |
 | `pi-rtk-optimizer` | `0.7.1` | [pi.dev](https://pi.dev/packages/pi-rtk-optimizer) | RTK optimizer |
 | `@capyup/pi-goal` | `0.6.0` | [pi.dev](https://pi.dev/packages/@capyup/pi-goal) | goal 관리 |
-| `pi-prompt-template-model` | `0.9.3` | [pi.dev](https://pi.dev/packages/pi-prompt-template-model) | prompt template model |
-
 lock: `agent/npm/package-lock.json`
 
 설치 형식:
@@ -60,6 +58,13 @@ pi install npm:<package>
 - backups / archives
 - scratch files
 - generated binaries
+
+## 확장 계획 (WIP)
+
+- [ ] QueryPie 모노레po 기반 pi 확장 개발 (아키텍처 분석 → MVP)
+- [ ] Playwright 기반 UI/UX 디버깅 도구 검토 (Anthropic Computer Use 또는 browser-use)
+
+자세한 TODO: `.pi/querypie-extension-todo.md`
 
 ## snapshot
 
