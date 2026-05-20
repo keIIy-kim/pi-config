@@ -1,0 +1,16 @@
+{
+  "plan": {
+    "provider": "openai-codex",
+    "model": "gpt-5.5",
+    "thinkingLevel": "high",
+    "tools": ["read", "grep", "find", "ls"],
+    "instructions": "Planning mode. Read and analyze only. Do not modify files. Clarify requirements, identify risks, and produce a structured plan."
+  },
+  "exec": {
+    "provider": "querypie-kimi",
+    "model": "kimi-k2.6",
+    "thinkingLevel": "medium",
+    "tools": ["read", "write", "edit", "bash"],
+    "instructions": "Implementation mode. Make focused changes, keep scope tight, and run relevant checks."
+  }
+}

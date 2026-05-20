@@ -1,0 +1,82 @@
+{
+  "lastChangelogVersion": "0.75.3",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
+  "theme": "soft-dracula",
+  "images": {
+    "blockImages": false,
+    "autoResize": true
+  },
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    {
+      "source": "npm:pi-subagents",
+      "skills": [],
+      "prompts": []
+    },
+    "npm:pi-simplify",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-rtk-optimizer",
+    "npm:@capyup/pi-goal",
+    {
+      "source": "npm:pi-prompt-template-model",
+      "skills": [],
+      "prompts": []
+    }
+  ],
+  "subagents": {
+    "agentOverrides": {
+      "reviewer": {
+        "model": "querypie-kimi/kimi-k2.6",
+        "thinking": "high"
+      },
+      "oracle": {
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "high"
+      },
+      "researcher": {
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium"
+      },
+      "worker": {
+        "model": "querypie-kimi/kimi-k2.6",
+        "thinking": "medium"
+      },
+      "planner": {
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "high"
+      },
+      "delegate": {
+        "model": "querypie-kimi/kimi-k2.6",
+        "thinking": "medium"
+      },
+      "scout": {
+        "model": "querypie-kimi/kimi-k2.6",
+        "thinking": "low"
+      },
+      "context-builder": {
+        "model": "querypie-kimi/kimi-k2.6",
+        "thinking": "low"
+      }
+    }
+  },
+  "enabledModels": [
+    "openai-codex/gpt-5.5",
+    "querypie-kimi/kimi-k2.6"
+  ],
+  "hideThinkingBlock": false,
+  "quietStartup": false,
+  "treeFilterMode": "user-only",
+  "warnings": {
+    "anthropicExtraUsage": true
+  },
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 32768,
+    "keepRecentTokens": 20000
+  },
+  "enableSkillCommands": true,
+  "terminal": {
+    "showTerminalProgress": false
+  }
+}

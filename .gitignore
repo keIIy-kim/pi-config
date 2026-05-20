@@ -1,0 +1,82 @@
+# Secrets / credentials
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+**/*secret*
+**/*secrets*
+**/*token*
+**/*key*
+**/*credential*
+**/*credentials*
+**/auth.json
+**/oauth*.json
+**/mcp*.json
+
+# pi sessions / runtime state
+.pi/
+sessions/
+**/sessions/
+**/session*/
+*.session
+*.html
+run-history.jsonl
+**/run-history.jsonl
+**/sessions.db
+**/sessions.db-*
+**/*.db-shm
+**/*.db-wal
+
+# Logs / crash dumps
+*.log
+**/*.log
+pi-crash.log
+**/pi-crash.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache / temp / generated state
+cache/
+**/cache/
+tmp/
+**/tmp/
+temp/
+**/temp/
+.pi-lens/cache/
+.pi-lens/turn-state.json
+.pi-lens/worklog.jsonl
+.pi-lens/metrics-history.json
+context-mode/sessions/
+
+# Backups / archives likely to contain secrets or stale runtime data
+agent-backup-*/
+agent-archive/
+*.bak
+*.backup
+*.orig
+
+# Dependencies / build outputs
+agent/bin/
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.vite/
+.turbo/
+
+# OS/editor noise
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local scratch files
+progress.md
+research-*.md
+hello
+helloworld
