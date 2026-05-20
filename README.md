@@ -4,6 +4,30 @@
 
 `~/.pi`의 symlink를 따라가 실제 파일로 복사한 snapshot입니다. 원본 설정은 건드리지 않습니다.
 
+## pi home / 위치
+
+pi의 user config home은 보통 아래 위치입니다.
+
+```bash
+~/.pi
+```
+
+이 repo의 `agent/` 디렉터리는 아래 위치에 대응됩니다.
+
+```bash
+~/.pi/agent
+```
+
+다른 장비에서 참고하려면:
+
+```bash
+git clone https://github.com/keIIy-kim/pi-config.git ~/repos/pi-config
+```
+
+필요한 파일만 `~/.pi/agent/` 아래로 복사하거나, 내 방식처럼 `~/.config/pi/agent`에 원본을 두고 `~/.pi/agent`에서 symlink로 연결하면 됩니다.
+
+주의: 통째로 덮어쓰기 전에 기존 `~/.pi/agent`는 백업하세요.
+
 ## 목적
 
 - 새 장비에서 pi 설정을 빠르게 복구
