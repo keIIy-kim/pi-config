@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.75.3",
+  "lastChangelogVersion": "0.75.4",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
   "theme": "soft-dracula",
@@ -7,22 +7,25 @@
     "blockImages": false,
     "autoResize": true
   },
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "high",
   "packages": [
     {
       "source": "npm:pi-subagents",
       "skills": [],
       "prompts": []
     },
-    "npm:pi-simplify",
     "npm:@juicesharp/rpiv-todo",
     "npm:pi-rtk-optimizer",
-    "npm:@capyup/pi-goal",
+    {
+      "source": "npm:@capyup/pi-goal",
+      "extensions": []
+    },
     {
       "source": "npm:pi-prompt-template-model",
       "skills": [],
       "prompts": []
-    }
+    },
+    "npm:@spences10/pi-lsp"
   ],
   "subagents": {
     "agentOverrides": {
