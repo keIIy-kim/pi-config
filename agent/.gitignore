@@ -1,0 +1,17 @@
+# Never commit runtime data, secrets, or logs
+auth.json
+memory/
+memory/*
+sessions/
+sessions/*
+pi-crash.log
+run-history.jsonl
+cache/
+cache/*
+skills/_helper/usage*.jsonl
+context-mode/
+context-mode/*
+projects-memory/
+projects-memory/*
+bin/
+bin/*

@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "description": "Skill Helper config. Categories drive the $ picker. externalSkills allows package skills outside agent/skills. manualOnly drives disable-model-invocation checks.",
+  "externalSkills": [
+    "librarian",
+    "discover-skill",
+    "find-querypie-wiki-content",
+    "frontend-project-init",
+    "frontend-review",
+    "querypie-runner-access",
+    "querypie-seamless-ssh",
+    "self-hosted-runner-labels",
+    "sync-querypie-wiki-skill",
+    "update-querypie-wiki-content"
+  ],
+  "manualOnly": [
+    "ask-matt",
+    "grill-with-docs",
+    "implement",
+    "improve-codebase-architecture",
+    "prototype",
+    "setup-matt-pocock-skills",
+    "to-issues",
+    "to-prd",
+    "triage",
+    "grill-me",
+    "handoff",
+    "teach",
+    "writing-great-skills",
+    "skill-helper"
+  ],
+  "categories": [
+    {
+      "id": "plan",
+      "aliases": [
+        "design",
+        "arch",
+        "domain",
+        "prd",
+        "issue",
+        "triage",
+        "handoff"
+      ],
+      "description": "design, plan, PRD, issues, triage, handoff",
+      "skills": [
+        "critical-ai-partner",
+        "codebase-design",
+        "domain-modeling",
+        "grilling",
+        "grill-me",
+        "grill-with-docs",
+        "improve-codebase-architecture",
+        "prototype",
+        "to-prd",
+        "to-issues",
+        "triage",
+        "handoff",
+        "ask-matt",
+        "setup-matt-pocock-skills",
+        "frontend-project-init",
+        "self-hosted-runner-labels"
+      ]
+    },
+    {
+      "id": "code",
+      "aliases": [
+        "build",
+        "implement",
+        "dev",
+        "work"
+      ],
+      "description": "implement, TDD, prototype, worktree, conflicts",
+      "skills": [
+        "workspace",
+        "implement",
+        "tdd",
+        "prototype",
+        "resolving-merge-conflicts",
+        "critical-ai-partner",
+        "frontend-project-init",
+        "frontend-review"
+      ]
+    },
+    {
+      "id": "debug",
+      "aliases": [
+        "fix",
+        "bug",
+        "diagnose",
+        "broken",
+        "failing",
+        "slow"
+      ],
+      "description": "debug bugs, failures, regressions, slow behavior",
+      "skills": [
+        "diagnosing-bugs",
+        "critical-ai-partner",
+        "tdd",
+        "querypie-runner-access",
+        "querypie-seamless-ssh"
+      ]
+    },
+    {
+      "id": "review",
+      "aliases": [
+        "check",
+        "audit",
+        "inspect",
+        "pr",
+        "ship",
+        "release",
+        "simplify"
+      ],
+      "description": "review, release check, audit, simplify",
+      "skills": [
+        "code-review-checklist",
+        "release-validation",
+        "ponytail-review",
+        "ponytail-audit",
+        "ponytail-debt",
+        "critical-ai-partner",
+        "frontend-review",
+        "self-hosted-runner-labels"
+      ]
+    },
+    {
+      "id": "research",
+      "aliases": [
+        "docs",
+        "web",
+        "source",
+        "verify",
+        "facts"
+      ],
+      "description": "research, docs, source-backed facts, safe summaries",
+      "skills": [
+        "research-with-sources",
+        "product-docs-verifier",
+        "copyright-safe-summary",
+        "librarian",
+        "find-querypie-wiki-content",
+        "update-querypie-wiki-content"
+      ]
+    },
+    {
+      "id": "artifact",
+      "aliases": [
+        "make",
+        "artifacts",
+        "deliverable",
+        "file",
+        "html",
+        "slides",
+        "ui"
+      ],
+      "description": "files, HTML artifacts, demos, slides",
+      "skills": [
+        "file-deliverable-router",
+        "artifact-html-builder",
+        "frontend-slides"
+      ]
+    },
+    {
+      "id": "mode",
+      "aliases": [
+        "workflow",
+        "talk",
+        "meta",
+        "skill",
+        "teach",
+        "help",
+        "yagni",
+        "lazy"
+      ],
+      "description": "answer style, YAGNI mode, teaching, skill help",
+      "skills": [
+        "caveman",
+        "ponytail",
+        "ponytail-help",
+        "ponytail-gain",
+        "teach",
+        "writing-great-skills",
+        "skill-helper",
+        "discover-skill",
+        "sync-querypie-wiki-skill"
+      ]
+    },
+    {
+      "id": "all",
+      "aliases": [
+        "everything"
+      ],
+      "description": "show every installed skill",
+      "skills": []
+    }
+  ]
+}
