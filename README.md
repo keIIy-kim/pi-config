@@ -37,8 +37,10 @@ Dotfiles-managed path:
 | `@capyup/pi-goal` | `0.6.x` | goal 관리. 원본 extension은 disabled, `goal-guard.ts` wrapper 사용 |
 | `pi-prompt-template-model` | `0.9.x` | prompt/model template |
 | `@spences10/pi-lsp` | `0.0.x` | LSP diagnostics/hover/definition/references |
+| `pi-web-access` | current | web/code search + content fetch tools |
+| `git:github.com/injaneity/pi-computer-use@v0.2.5` | pinned | macOS computer-use tools |
 
-lock: `agent/npm/package-lock.json`
+`agent/npm/` runtime install artifacts are intentionally ignored.
 
 설치 형식:
 
@@ -123,7 +125,8 @@ Run /goal-focus to choose this session's goal
 - `goal-auditor.json`
 - prompts / themes / extensions
 - packaged skills
-- custom skills: `frontend-slides`, `workspace`
+- custom and vendored skills under `agent/skills/`
+- external/local team skill path refs in settings (actual team skill source is not vendored here)
 
 ## 제외
 

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.75.4",
+  "lastChangelogVersion": "0.79.9",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
   "theme": "soft-dracula",
@@ -25,7 +25,9 @@
       "skills": [],
       "prompts": []
     },
-    "npm:@spences10/pi-lsp"
+    "npm:@spences10/pi-lsp",
+    "git:github.com/injaneity/pi-computer-use@v0.2.5",
+    "npm:pi-web-access"
   ],
   "subagents": {
     "agentOverrides": {
@@ -81,5 +83,8 @@
   "enableSkillCommands": true,
   "terminal": {
     "showTerminalProgress": false
-  }
+  },
+  "skills": [
+    "/Users/kelly/.config/pi/agent/chequer-skills"
+  ]
 }
